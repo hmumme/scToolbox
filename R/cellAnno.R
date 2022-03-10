@@ -19,3 +19,6 @@ scAnno <- function(obj, type) {
   }
   return(pred)
 }
+
+
+##
