@@ -31,6 +31,8 @@ scAnno <- function(obj, type) {
 #' 
 dotAnno = function(obj, clusters = "all", type = "all") {
   if (type == "all") {
-    #features = read.
+    features = read.table("data/markers/tMarkers.txt", sep = "\t")$V1
   }
+  plot = Seurat::DotPlot(obj, features = features, group.by = "seurat_clusters")
+  return(plot)
 }
