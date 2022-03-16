@@ -3,6 +3,7 @@
 #' @param ex Seurat example dataset to load, options include: "3k"
 #' @param norm A boolean specifying whether to normalize RNA assay and cluster (default FALSE)
 #' @return Seurat object of example dataset
+#' @export
 #' @examples  
 #' obj = loadExample("3k")
 #' 

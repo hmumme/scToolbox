@@ -31,6 +31,6 @@ scAnno <- function(obj, type) {
 #' 
 dotAnno = function(obj, clusters = "all", type = "all") {
   if (type == "all") {
-
+    #features = read.
   }
 }
