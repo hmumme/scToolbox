@@ -20,6 +20,7 @@ scAnno <- function(obj, type) {
   return(pred)
 }
 
+<<<<<<< HEAD
 #'
 #'
 #' @param obj Seurat scRNA-seq object (default assay must be RNA or SCT, already normalized)
@@ -31,3 +32,7 @@ scAnno <- function(obj, type) {
 dotAnno = function(obj, clusters = "all", type = "all") {
   
 }
+=======
+
+##
+>>>>>>> 59674b8bab0fecb07d3caef5a0f9e2676bf365d1
