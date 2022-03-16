@@ -20,19 +20,17 @@ scAnno <- function(obj, type) {
   return(pred)
 }
 
-<<<<<<< HEAD
-#'
+#' Generate DotPlot with informative details to assist with cluster annotation
 #'
 #' @param obj Seurat scRNA-seq object (default assay must be RNA or SCT, already normalized)
 #' @param clusters clusters of interest to provide dotplot (default is all)
 #' @param type A string specifiying the type of annotation
+#' @return A ggplot object of dotplot with annotations
 #' @export
 #' 
 #' 
 dotAnno = function(obj, clusters = "all", type = "all") {
-  
-}
-=======
+  if (type == "all") {
 
-##
->>>>>>> 59674b8bab0fecb07d3caef5a0f9e2676bf365d1
+  }
+}

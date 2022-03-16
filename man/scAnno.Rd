@@ -2,12 +2,12 @@
 % Please edit documentation in R/cellAnno.R
 \name{scAnno}
 \alias{scAnno}
-\title{Perform SingleR annotation on Seurat scRNA-seq Object}
+\title{Perform automatic SingleR annotation on Seurat scRNA-seq object}
 \usage{
 scAnno(obj, type)
 }
 \arguments{
-\item{obj}{Seurat scRNA-seq object (default assay must be RNA, already normalized)}
+\item{obj}{Seurat scRNA-seq object (default assay must be RNA or SCT, already normalized and clustered)}
 
 \item{type}{A string specifying the type of annotation labels to produce (fine or broad labels)}
 }
@@ -15,9 +15,9 @@ scAnno(obj, type)
 A vector of Labels to add into Seurat Object
 }
 \description{
-Perform SingleR annotation on Seurat scRNA-seq Object
+Perform automatic SingleR annotation on Seurat scRNA-seq object
 }
 \examples{
 cellTypePredictions = scAnno(obj = seuratObj, type = "fine")
-seuratObj$cellAnnotation = cellTypePredictions
+seuratObj[["cellAnnotation"]] = cellTypePredictions
 }
