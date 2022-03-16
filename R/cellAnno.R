@@ -32,7 +32,22 @@ scAnno <- function(obj, type) {
 dotAnno = function(obj, clusters = "all", type = "all") {
   if (type == "all") {
     features = read.table("data/markers/tMarkers.txt", sep = "\t")$V1
+    groups = factor(read.table("data/markers/tColors.txt", sep = "\t")$V1)
+    c = helpColor(groups)
   }
   plot = Seurat::DotPlot(obj, features = features, group.by = "seurat_clusters")
+  plot = plot + ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.25, colour = c))
   return(plot)
+}
+
+#' Helper Function to Generate Color Vector for DotPlot
+#' 
+helpColor = function(groups) {
+  cols = RColorBrewer::brewer.pal(length(levels(groups)),"Set1")
+  names(cols) = levels(groups)
+  c = rep("a",length(groups))
+  for (i in 1:length(groups)) {
+    c[i] = cols[groups[i]]
+  }
+  return(c)
 }
