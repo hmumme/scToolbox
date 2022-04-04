@@ -8,4 +8,9 @@ Hope Mumme (hmumme@emory.edu)
 ```
 devtools::install_github("hmumme/scToolbox")
 ```
+
+### Required Packages:
+- Seurat
+- dplyr
+
 ### Demo:
