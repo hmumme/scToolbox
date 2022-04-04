@@ -6,11 +6,13 @@ Hope Mumme (hmumme@emory.edu)
 
 ### Installation:
 ```
+# Install scToolbox Package
 devtools::install_github("hmumme/scToolbox")
-```
 
-### Required Packages:
-- Seurat
-- dplyr
+# Install Other Required Packages
+install.packages('Seurat')
+install.packages('ggplot2')
+install.packages('dplyr')
+```
 
 ### Demo:
