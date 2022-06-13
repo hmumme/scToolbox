@@ -8,7 +8,10 @@
 #' obj = loadExample("3k")
 #' 
 loadExample = function(ex, norm = FALSE) {
-  if (ex == "3k") {
+  if (file.exists("data/pbmc3k/filtered_gene_bc_matrices/hg19/") == "FALSE") {
+    print("data directory not found, make sure data/pbmc... is in your working directory")
+    return(NULL)
+  } else if (ex == "3k") {
     data = Seurat::Read10X(data.dir = "data/pbmc3k/filtered_gene_bc_matrices/hg19/")
   } else {
     print("dataset does not exist, available: 3k")
