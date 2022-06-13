@@ -38,7 +38,7 @@ dotAnno = function(obj, clusters = "all", type = "general") {
     features = read.table("data/markers/tMarkers.txt", sep = "\t")$V1
     groups = factor(read.table("data/markers/tColors.txt", sep = "\t")$V1)
     c = helpColor(groups)
-  } else if (type == "all") {
+  } else if (type == "general") {
     checkFile = all(file.exists("data/markers/generalMarkers.txt"), file.exists("data/markers/generalColors.txt"))
     features = read.table("data/markers/generalMarkers.txt", sep = "\t")$V1
     groups = factor(read.table("data/markers/generalColors.txt", sep = "\t")$V1)
