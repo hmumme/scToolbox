@@ -9,7 +9,7 @@
 #' 
 loadExample = function(ex, norm = FALSE) {
   if (ex == "3k") {
-    data = readRDS("https://raw.githubusercontent.com/hmumme/scToolbox/main/data/pbmc3k_data.Rda")
+    example.data = readRDS(url("https://github.com/hmumme/scToolbox/blob/2cd0cc0e7f75c0f7357e0cef60a8f46e7df89c32/data/pbmc3k.Rda"))
   }  
     obj = Seurat::CreateSeuratObject(counts = data, project = ex, min.cells = 3, min.features = 200)
     if (norm) {
