@@ -4,6 +4,8 @@ Single-Cell helper functions to make single cell analysis more efficient.
 
 Hope Mumme (hmumme@emory.edu)
 
+Sarthak Satpathy (sarthak.satpathy@emory.edu)
+
 ### Installation:
 Install scToolbox
 ```
