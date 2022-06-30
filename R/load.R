@@ -8,15 +8,9 @@
 #' obj = loadExample("3k")
 #' 
 loadExample = function(ex, norm = FALSE) {
-  if (file.exists("data/pbmc3k/filtered_gene_bc_matrices/hg19/") == "FALSE") {
-    print("data directory not found, make sure data/pbmc... is in your working directory")
-    return(NULL)
-  } else if (ex == "3k") {
-    data = Seurat::Read10X(data.dir = "data/pbmc3k/filtered_gene_bc_matrices/hg19/")
-  } else {
-    print("dataset does not exist, available: 3k")
-    return(NULL)
-  } 
+  if (ex == "3k") {
+    data = readRDS("https://raw.githubusercontent.com/hmumme/scToolbox/main/data/pbmc3k_data.Rda")
+  }  
     obj = Seurat::CreateSeuratObject(counts = data, project = ex, min.cells = 3, min.features = 200)
     if (norm) {
       obj <- Seurat::NormalizeData(obj)
