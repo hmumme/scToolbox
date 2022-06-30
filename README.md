@@ -1,6 +1,6 @@
 # scToolbox
 
-Single-Cell helper functions I created to make my analysis more efficient.
+Single-Cell helper functions to make single cell analysis more efficient.
 
 Hope Mumme (hmumme@emory.edu)
 
